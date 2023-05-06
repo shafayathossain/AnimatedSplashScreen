@@ -8,6 +8,8 @@ Starting from Android 12, android changed it's splash animation integration proc
 3. Brand image (`windowSplashScreenBrandingImage`)
 4. Page background color (`windowSplashScreenBackground`)
 
+![Splash Screen Elements](contents/splash_elements.png)
+
 Animated icons are also supported here in the element 1. But animation should be defined in an [AnimationDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimationDrawable) file.In this project's [drawable folder](https://github.com/shafayathossain/AnimatedSplashScreen/tree/main/app/src/main/res/drawable), images for each frames of the animated icon can be found. All of these frames image are defined in the [splash_icon.xml](https://github.com/shafayathossain/AnimatedSplashScreen/blob/main/app/src/main/res/drawable/splash_icon.xml) file. Then set this `splash_icon` as the icon in splash.
 
 If your animation takes longer than 1000ms then it may not appear. Standard splash animated icon shouldn't take longer than 166ms. But if longer time is required in splash, then `setKeepOnScreenCondition` needs to be override.
@@ -39,6 +41,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
+
+### Demo
+![Demo](contents/splash.gif)
 
 This is the most easiest way to show some animation in splash.
 
